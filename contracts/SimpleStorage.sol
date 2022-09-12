@@ -2,7 +2,7 @@
 pragma solidity ^0.8.8;
 
 contract SimpleStorage {
-    uint256 private favoriteNumber;
+    uint256 internal favoriteNumber;
 
     struct People {
         uint256 favoriteNumber;
@@ -13,7 +13,7 @@ contract SimpleStorage {
 
     People[] public people;
 
-    function store (uint256 _favoriteNumber) public {
+    function store (uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
     }
 
